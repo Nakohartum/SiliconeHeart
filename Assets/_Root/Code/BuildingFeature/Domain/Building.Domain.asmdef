@@ -1,0 +1,16 @@
+{
+    "name": "Building.Domain",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

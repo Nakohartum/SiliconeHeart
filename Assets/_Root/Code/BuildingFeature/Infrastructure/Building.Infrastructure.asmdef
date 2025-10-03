@@ -1,0 +1,17 @@
+{
+    "name": "Building.Infrastructure",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1498de0a0ab8f3f4fb65ad462b1183f0",
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
