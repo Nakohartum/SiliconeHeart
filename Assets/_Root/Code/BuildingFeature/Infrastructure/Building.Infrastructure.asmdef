@@ -2,8 +2,14 @@
     "name": "Building.Infrastructure",
     "rootNamespace": "",
     "references": [
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd",
+        "GUID:ddb2da6d1f0c4cf438d7d889f00727d6",
         "GUID:1498de0a0ab8f3f4fb65ad462b1183f0",
-        "GUID:2fba7532d6e5a6f4490d60c85ff73efd"
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:593a5b492d29ac6448b1ebf7f035ef33"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

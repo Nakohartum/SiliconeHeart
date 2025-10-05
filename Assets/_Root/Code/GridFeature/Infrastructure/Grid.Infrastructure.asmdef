@@ -1,0 +1,19 @@
+{
+    "name": "Grid.Infrastructure",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd",
+        "GUID:1ff5beaf289f50942ae1c3ab7ac1be81",
+        "GUID:3a59515ab24602e43abe5771aea49279",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Grid.Applicaiton",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd",
+        "GUID:3a59515ab24602e43abe5771aea49279"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

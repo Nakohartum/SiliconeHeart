@@ -1,0 +1,10 @@
+{
+    "BuildingModels": [
+        {
+            "BuildingType": "Test",
+            "GhostBuildingName": "Test",
+            "RealBuildingPath": "RealTest",
+            "Cost": 1200.0
+        }
+    ]
+}
