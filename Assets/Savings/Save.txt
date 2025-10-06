@@ -1,0 +1,27 @@
+{
+    "Buildings": [
+        {
+            "GridPos": {
+                "X": -1.25,
+                "Y": 2.25
+            },
+            "Size": {
+                "X": 1,
+                "Y": 2
+            },
+            "BuildingType": "GirlBuilding"
+        },
+        {
+            "GridPos": {
+                "X": 0.25,
+                "Y": 2.75
+            },
+            "Size": {
+                "X": 0,
+                "Y": 0
+            },
+            "BuildingType": "StoneBuilding"
+        }
+    ],
+    "OccupiedCells": []
+}

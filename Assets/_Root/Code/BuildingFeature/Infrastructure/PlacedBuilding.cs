@@ -14,7 +14,12 @@ namespace _Root.Code.BuildingFeature.Infrastructure
         [SerializeField] private SpriteRenderer _spriteRenderer;
         private DeleteBuildingUseCase _deleteBuildingUseCase;
         public GridPos GridPos => new GridPos(transform.position.x, transform.position.y);
-        public Size Size =>  new Size((int)_collider.size.x, (int)_collider.size.y);
+
+        public Size Size => new Size
+        {
+            X = (int)_collider.size.x,
+            Y = (int)_collider.size.y
+        };
 
         [Inject]
         private void Construct(DeleteBuildingUseCase deleteBuildingUseCase)

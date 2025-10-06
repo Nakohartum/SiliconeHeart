@@ -362,6 +362,8 @@ MonoBehaviour:
   _buildingButtonParent: {fileID: 368729348}
   _placingButton: {fileID: 917614904}
   _deleteButton: {fileID: 2078648263}
+  _saveButton: {fileID: 494964022}
+  _loadButton: {fileID: 292786024}
 --- !u!1 &268773725
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,12 +10,10 @@ namespace _Root.Code.BuildingFeature.Infrastructure
         [SerializeField] private GhostBuilding _ghostBuilding;
         public override void InstallBindings()
         {
-            Container.Bind<BuildingState>().AsSingle().NonLazy();
             Container.Bind<CheckForPlacementUseCase>().AsSingle().NonLazy();
             Container.Bind<MoveGhostBuildingUseCase>().AsSingle().NonLazy();
-            Container.Bind<PlaceBuildingUseCase>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<GhostBuilding>().FromInstance(_ghostBuilding).AsSingle().NonLazy();
-            
+            Container.BindInterfacesAndSelfTo<BuildingSpawner>().AsSingle().NonLazy();
         }
     }
 }

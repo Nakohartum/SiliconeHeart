@@ -2,6 +2,7 @@
 
 namespace _Root.Code.Shared.GridPos
 {
+    [Serializable]
     public struct GridPos : IEquatable<GridPos>
     {
         public float X;

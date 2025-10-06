@@ -1,13 +1,11 @@
-﻿namespace _Root.Code.Shared.Common
+﻿using System;
+
+namespace _Root.Code.Shared.Common
 {
+    [Serializable]
     public struct Size
     {
-        public readonly int X, Y;
+        public int X, Y;
 
-        public Size(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
     }
 }

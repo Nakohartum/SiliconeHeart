@@ -12,5 +12,6 @@ namespace _Root.Code.Shared.BuildingPorts
         UniTask SetPlacedBuildingAsync(string buildingType, IGhostBuildingPort ghost);
         
         string GetImageForBuildingUI(string buildingType);
+        UniTask<IPlacedBuildingPort> GetPlacedBuildingByTypeAsync(string buildingBuildingType);
     }
 }

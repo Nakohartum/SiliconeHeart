@@ -14,9 +14,14 @@ namespace _Root.Code.GridFeature.Application
             _grid = grid;
         }
 
-        public void PlaceBuilding(IGhostBuildingPort buildingPort)
+        public void PlaceBuilding(GridPos pos, Size size)
         {
-            _grid.Place(buildingPort);
+            _grid.Place(pos, size);
+        }
+
+        public void RestoreData(GridPos pos)
+        {
+            _grid.Place(pos, new Size{X = 1, Y = 1});
         }
     }
 }

@@ -1,0 +1,19 @@
+{
+    "name": "Data.Infrastructure",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd",
+        "GUID:aaf38a06d35b29d42a711a7d776dc21a",
+        "GUID:14d4cb777e129e44dac4b50e1f48ca9d",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

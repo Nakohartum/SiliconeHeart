@@ -62,5 +62,13 @@ namespace _Root.Code.BuildingFeature.Infrastructure
             var model = _buildings.Find(b => b.BuildingType == buildingType);
             return model.GhostBuildingSprite;
         }
+
+        public async UniTask<IPlacedBuildingPort> GetPlacedBuildingByTypeAsync(string buildingType)
+        {
+            var model = _buildings.Find(b => b.BuildingType == buildingType);
+            var go  =  await _addressablesHelper.GetTAsync<GameObject>(model.RealBuildingPath);
+            var realBuilding = go.GetComponent<IPlacedBuildingPort>();
+            return realBuilding;
+        }
     }
 }

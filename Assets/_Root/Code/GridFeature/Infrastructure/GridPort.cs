@@ -2,6 +2,7 @@
 using _Root.Code.GridFeature.Application;
 using _Root.Code.Shared.BuildingPorts;
 using _Root.Code.Shared.Common;
+using _Root.Code.Shared.DataPorts;
 using _Root.Code.Shared.GridPos;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -33,9 +34,10 @@ namespace _Root.Code.GridFeature.Infrastructure
             CreateLines();
         }
 
+
         private void CreateLines()
         {
-            var bounds = _tilemap.cellBounds;   // границы занятых ячеек
+            var bounds = _tilemap.cellBounds;   
 
             Vector3 worldMin = _unityGrid.GetCellCenterWorld(bounds.min) - new Vector3(_grid.CellSize, _grid.CellSize) * 0.5f;
 
@@ -72,9 +74,9 @@ namespace _Root.Code.GridFeature.Infrastructure
             return true;
         }
 
-        public void Place(IGhostBuildingPort buildingPort)
+        public void Place(IPlacedBuildingPort buildingPort)
         {
-            _placeBuildingUseCase.PlaceBuilding(buildingPort);
+            _placeBuildingUseCase.PlaceBuilding(buildingPort.GridPos, buildingPort.Size);
         }
 
         public void Remove(GridPos pos, Size size)
@@ -99,7 +101,12 @@ namespace _Root.Code.GridFeature.Infrastructure
                 line.SetActive(false);
             }
         }
-        
+
+        public List<GridPos> GetOccupiedCells()
+        {
+            return _grid.OccupiedGridPositions;
+        }
+
         private void CreateLine(Vector3 start, Vector3 end)
         {
             var go = new GameObject("GridLine", typeof(LineRenderer))

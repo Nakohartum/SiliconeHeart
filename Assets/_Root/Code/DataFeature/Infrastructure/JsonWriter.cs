@@ -7,7 +7,7 @@ namespace _Root.Code.DataFeature.Infrastructure
 {
     public class JsonWriter : IWritable
     {
-        public string FilePath = Application.dataPath;
+        public string FilePath = UnityEngine.Application.dataPath;
         
         public void WriteToJson<T>(string filePath, T data)
         {
@@ -15,8 +15,9 @@ namespace _Root.Code.DataFeature.Infrastructure
             if (!File.Exists(filePath))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
-                File.WriteAllText(fullPath, JsonUtility.ToJson(data, true));
+                
             }
+            File.WriteAllText(fullPath, JsonUtility.ToJson(data, true));
         }
     }
 }

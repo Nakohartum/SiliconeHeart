@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _Root.Code.Shared.AddressablesPort;
 using _Root.Code.Shared.BuildingPorts;
+using _Root.Code.Shared.DataPorts;
 using _Root.Code.Shared.UI;
 using _Root.Code.UIFeature.Application;
 using Cysharp.Threading.Tasks;
@@ -19,21 +20,27 @@ namespace _Root.Code.UIFeature.Infrastructure
         [SerializeField] private Transform _buildingButtonParent;
         [SerializeField] private Button _placingButton;
         [SerializeField] private Button _deleteButton;
+        [SerializeField] private Button _saveButton;
+        [SerializeField] private Button _loadButton;
         private DeleteItem _deleteItem;
         private IAddressablesHelper _addressablesHelper;
+        private IDataRepository _dataRepository;
         private IBuildingRepository _buildingRepository;
         private SetBuildingToPlaceUseCase _setBuildingToPlaceUseCase;
         private BuildingButton[]  _buildingButtons;
+        private IRestoreData _restoreData;
         public Action OnIconClicked { get; private set; }
 
         [Inject]
         private void Construct(IBuildingRepository buildingRepository, SetBuildingToPlaceUseCase setBuildingToPlaceUseCase, 
-            IAddressablesHelper addressablesHelper, DeleteItem deleteItem)
+            IAddressablesHelper addressablesHelper, DeleteItem deleteItem, IDataRepository dataRepository, IRestoreData restoreData)
         {
             _buildingRepository = buildingRepository;
             _setBuildingToPlaceUseCase = setBuildingToPlaceUseCase;
             _addressablesHelper = addressablesHelper;
             _deleteItem = deleteItem;
+            _dataRepository =  dataRepository;
+            _restoreData =  restoreData;
             PopulateButtons().Forget();
         }
 
@@ -42,6 +49,8 @@ namespace _Root.Code.UIFeature.Infrastructure
             _buildingButtonParent.gameObject.SetActive(false);
             _placingButton.onClick.AddListener(ToggleBuildingMode);
             _deleteButton.onClick.AddListener(ActivateDeleteMode);
+            _saveButton.onClick.AddListener(_dataRepository.Save);
+            _loadButton.onClick.AddListener(() => _restoreData.Restore().Forget());
         }
 
         private void ToggleBuildingMode()

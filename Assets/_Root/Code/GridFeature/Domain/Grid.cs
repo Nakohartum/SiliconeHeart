@@ -35,13 +35,13 @@ namespace _Root.Code.GridFeature.Domain
             return true;
         }
 
-        public void Place(IGhostBuildingPort buildingPort)
+        public void Place(GridPos pos, Size size)
         {
-            for (int x = 0; x < buildingPort.Size.X; x++)
+            for (int x = 0; x < size.X; x++)
             {
-                for (int y = 0; y < buildingPort.Size.Y; y++)
+                for (int y = 0; y < size.Y; y++)
                 {
-                    var place = new GridPos(x + buildingPort.GridPos.X, y + buildingPort.GridPos.Y);
+                    var place = new GridPos(x + pos.X, y + pos.Y);
                     OccupiedGridPositions.Add(place);
                 }
             }

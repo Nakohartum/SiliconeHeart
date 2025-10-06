@@ -6,7 +6,7 @@ namespace _Root.Code.DataFeature.Infrastructure
 {
     public class JsonReader : IReadable
     {
-        public string FilePath = Application.dataPath;
+        public string FilePath = UnityEngine.Application.dataPath;
         public T ReadFromJson<T>(string filePath)
         {
             var fullPath = Path.Combine(FilePath, filePath);

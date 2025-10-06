@@ -1,0 +1,17 @@
+{
+    "name": "Data.Application",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fba7532d6e5a6f4490d60c85ff73efd",
+        "GUID:aaf38a06d35b29d42a711a7d776dc21a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}
