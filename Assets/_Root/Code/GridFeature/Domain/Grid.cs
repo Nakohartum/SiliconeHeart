@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _Root.Code.Shared.BuildingPorts;
+using _Root.Code.Shared.Common;
 using _Root.Code.Shared.GridPos;
 
 namespace _Root.Code.GridFeature.Domain
@@ -42,6 +43,18 @@ namespace _Root.Code.GridFeature.Domain
                 {
                     var place = new GridPos(x + buildingPort.GridPos.X, y + buildingPort.GridPos.Y);
                     OccupiedGridPositions.Add(place);
+                }
+            }
+        }
+        
+        public void Remove(GridPos pos, Size size)
+        {
+            for (int x = 0; x < size.X; x++)
+            {
+                for (int y = 0; y < size.Y; y++)
+                {
+                    var place = new GridPos(x + pos.X, y + pos.Y);
+                    OccupiedGridPositions.Remove(place);
                 }
             }
         }

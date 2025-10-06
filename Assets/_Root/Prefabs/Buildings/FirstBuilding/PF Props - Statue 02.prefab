@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7947911505737750448}
   - component: {fileID: 7947911505737750450}
   - component: {fileID: 6418061727893431866}
-  - component: {fileID: 4444353200472962687}
-  - component: {fileID: -8776351379072484405}
-  - component: {fileID: -5311453412835004623}
-  m_Layer: 20
-  m_Name: PF Props - Statue 01
+  - component: {fileID: 4875824025928754156}
+  - component: {fileID: -4785118610882328749}
+  - component: {fileID: 8426021056969582961}
+  m_Layer: 0
+  m_Name: PF Props - Statue 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -840654701
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300114, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.15625, y: 2.28125}
   m_EdgeRadius: 0
---- !u!114 &4444353200472962687
+--- !u!114 &4875824025928754156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,13 +143,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7947911505737750455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66782365fb124c04aba9da666257cca4, type: 3}
+  m_Script: {fileID: 11500000, guid: dd56279c6ebc48e3b0c92b7959de9c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 6418061727893431866}
-  _placedBuilding: {fileID: 4875824025928754156, guid: bee5211dd89369d41b2edce1789a0f1e, type: 3}
   _spriteRenderer: {fileID: 7947911505737750450}
---- !u!114 &-8776351379072484405
+--- !u!114 &-4785118610882328749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,11 +157,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7947911505737750455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de7bf7b4454b4776bd1a902fda5d79d8, type: 3}
+  m_Script: {fileID: 11500000, guid: e119cabc017a4bb3a2b69417b48fef30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ghostBuilding: {fileID: 4444353200472962687}
---- !u!114 &-5311453412835004623
+  _placedBuilding: {fileID: 4875824025928754156}
+--- !u!114 &8426021056969582961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
-  - {fileID: -8776351379072484405}
+  - {fileID: -4785118610882328749}
   _installerPrefabs: []
   _autoRun: 1
   _kernel: {fileID: 0}
@@ -190,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7947911505844789837}
   - component: {fileID: 7947911505844789838}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

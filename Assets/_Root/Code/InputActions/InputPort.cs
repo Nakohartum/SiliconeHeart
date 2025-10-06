@@ -10,6 +10,15 @@ namespace _Root.Code.InputActions
         [SerializeField] private Grid _unityGrid;
         private PlayerInputActions _playerInputActions;
         private Camera _camera;
+
+        public System.Numerics.Vector2 MousePositionWorld
+        {
+            get
+            {
+                var value = _playerInputActions.BuildingActions.MousePosition.ReadValue<Vector2>();
+                return new System.Numerics.Vector2(value.x, value.y);
+            }
+        }
         public event Action OnClick;
 
         private void Awake()
@@ -24,18 +33,18 @@ namespace _Root.Code.InputActions
             _playerInputActions.BuildingActions.Click.performed += _ => OnClick?.Invoke();
         }
 
-        public GridPos MousePosition
+        public GridPos GridMousePosition
         {
             get
             {
                 Vector2 screenPos = _playerInputActions.BuildingActions.MousePosition.ReadValue<Vector2>();
                 
 
-                // экран → мир
+                
                 Vector3 world = _camera.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, -_camera.transform.position.z));
                 
 
-                // мир → ячейка → центр
+                
                 Vector3Int cell = _unityGrid.WorldToCell(world);
                 
                 Vector3 snapped = _unityGrid.GetCellCenterWorld(cell);

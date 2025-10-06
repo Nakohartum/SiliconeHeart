@@ -7,6 +7,7 @@ namespace _Root.Code.BuildingFeature.Domain
     {
         public string BuildingType;
         public string GhostBuildingName;
+        public string GhostBuildingSprite;
         public string RealBuildingPath;
         public float Cost;
         

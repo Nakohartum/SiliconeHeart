@@ -8,7 +8,7 @@ namespace _Root.Code.BuildingFeature.Infrastructure
         [SerializeField] private GhostBuildingMover _ghostBuildingMover;
         public override void InstallBindings()
         {
-            Container.Bind<BuildingRepository>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<BuildingRepository>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<GhostBuildingMover>().FromInstance(_ghostBuildingMover).AsSingle().NonLazy();
         }
     }

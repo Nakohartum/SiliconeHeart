@@ -7,6 +7,7 @@ using _Root.Code.Shared.BuildingPorts;
 using _Root.Code.Shared.DataPorts;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Zenject;
 using Object = UnityEngine.Object;
 
@@ -19,23 +20,21 @@ namespace _Root.Code
         private DiContainer _container;
         private BuildingRepository _buildingRepository;
         private IWritable _writable;
+        private ZenjectSceneLoader _sceneLoader;
 
         [Inject]
-        private void Construct(GhostBuildingMover ghostBuildingMover, BuildingRepository buildingRepository, DiContainer container,  IWritable writable)
+        private void Construct(GhostBuildingMover ghostBuildingMover, BuildingRepository buildingRepository, DiContainer container,  IWritable writable, ZenjectSceneLoader sceneLoader)
         {
             _ghostBuildingMover = ghostBuildingMover;
             _container = container;
             _buildingRepository = buildingRepository;
             _writable = writable;
+            _sceneLoader = sceneLoader;
         }
 
-        [ContextMenu("SetBuilding")]
-        public async UniTask SetBuilding()
+        public void Start()
         {
-            var res = await _buildingRepository.GetBuildingAsync("Test");
-            var ghostBuilding = _container.InstantiatePrefabForComponent<IGhostBuildingPort>(res as GhostBuilding);
-            await _buildingRepository.SetPlacedBuildingAsync("Test",  ghostBuilding);
-            _ghostBuildingMover.SetGhostBuilding(ghostBuilding);
+            _sceneLoader.LoadSceneAsync("UIScene",  LoadSceneMode.Additive, extraBindings:null, LoadSceneRelationship.Child);
         }
         
     }

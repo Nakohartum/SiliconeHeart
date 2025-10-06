@@ -1,9 +1,17 @@
 {
     "BuildingModels": [
         {
-            "BuildingType": "Test",
-            "GhostBuildingName": "Test",
-            "RealBuildingPath": "RealTest",
+            "BuildingType": "GirlBuilding",
+            "GhostBuildingName": "GirlBuildingGhost",
+            "GhostBuildingSprite": "GirlBuildingSprite",
+            "RealBuildingPath": "GirlBuildingReal",
+            "Cost": 1200.0
+        },
+        {
+            "BuildingType": "StoneBuilding",
+            "GhostBuildingName": "StoneBuildingGhost",
+            "GhostBuildingSprite": "StoneBuildingSprite",
+            "RealBuildingPath": "StoneBuildingReal",
             "Cost": 1200.0
         }
     ]

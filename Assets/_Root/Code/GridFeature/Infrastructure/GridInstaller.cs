@@ -18,6 +18,7 @@ namespace _Root.Code.GridFeature.Infrastructure
             Container.Bind<Grid>().AsSingle().WithArguments(_width, _height, _cellSize).NonLazy();
             Container.Bind<CheckForPlacementUseCase>().AsSingle().NonLazy();
             Container.Bind<PlaceBuildingUseCase>().AsSingle().NonLazy();
+            Container.Bind<DeleteBuildingUseCase>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<GridPort>().FromInstance(_gridPort).AsSingle().NonLazy();
         }
     }

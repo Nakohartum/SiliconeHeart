@@ -6,5 +6,9 @@ namespace _Root.Code.Shared.BuildingPorts
     {
         GridPos.GridPos GridPos { get; }
         Size Size { get; }
+
+
+        void Delete();
+        void OnHover(bool hover);
     }
 }

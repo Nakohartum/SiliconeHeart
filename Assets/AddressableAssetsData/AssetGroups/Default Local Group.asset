@@ -17,13 +17,33 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: bed2bede735cf4e408e723aa5ad23655
   m_SerializeEntries:
+  - m_GUID: 28e7ad2f5b56c3d48bc31b7b953cb047
+    m_Address: GirlBuildingSprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3845f38523991ac43a72e14d80350be9
+    m_Address: StoneBuildingReal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54a209624fdd3f94cb572fda6e271c62
+    m_Address: StoneBuildingSprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bee5211dd89369d41b2edce1789a0f1e
-    m_Address: RealTest
+    m_Address: GirlBuildingReal
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d730038d263986f4dac93230e1dd62b0
-    m_Address: Test
+    m_Address: GirlBuildingGhost
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d978951e0060c974d8ec2904a60bd8f6
+    m_Address: StoneBuildingGhost
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

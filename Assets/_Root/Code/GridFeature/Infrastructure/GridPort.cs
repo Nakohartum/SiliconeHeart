@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using _Root.Code.GridFeature.Application;
 using _Root.Code.Shared.BuildingPorts;
+using _Root.Code.Shared.Common;
 using _Root.Code.Shared.GridPos;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -18,15 +19,17 @@ namespace _Root.Code.GridFeature.Infrastructure
         private GridFeature.Domain.Grid _grid;
         private CheckForPlacementUseCase  _checkForPlacementUseCase;
         private PlaceBuildingUseCase   _placeBuildingUseCase;
+        private DeleteBuildingUseCase  _deleteBuildingUseCase;
         private List<GameObject> _lines = new();
 
         [Inject]
         private void Construct(GridFeature.Domain.Grid grid, CheckForPlacementUseCase checkForPlacementUseCase,
-            PlaceBuildingUseCase placeBuildingUseCase)
+            PlaceBuildingUseCase placeBuildingUseCase, DeleteBuildingUseCase deleteBuildingUseCase)
         {
             _grid = grid;
             _checkForPlacementUseCase = checkForPlacementUseCase;
             _placeBuildingUseCase = placeBuildingUseCase;
+            _deleteBuildingUseCase =  deleteBuildingUseCase;
             CreateLines();
         }
 
@@ -72,6 +75,11 @@ namespace _Root.Code.GridFeature.Infrastructure
         public void Place(IGhostBuildingPort buildingPort)
         {
             _placeBuildingUseCase.PlaceBuilding(buildingPort);
+        }
+
+        public void Remove(GridPos pos, Size size)
+        {
+            _deleteBuildingUseCase.DeleteBuilding(pos, size);
         }
 
         [ContextMenu("ShowGrid")]
