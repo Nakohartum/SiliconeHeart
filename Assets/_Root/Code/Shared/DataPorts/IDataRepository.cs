@@ -7,5 +7,6 @@ namespace _Root.Code.Shared.DataPorts
         void Save();
         void AddBuilding(string buildingType, IPlacedBuildingPort building);
         SaveData Load();
+        void RemoveBuilding(IPlacedBuildingPort placedBuildingPort);
     }
 }

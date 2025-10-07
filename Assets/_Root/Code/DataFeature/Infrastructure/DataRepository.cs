@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _Root.Code.DataFeature.Application;
 using _Root.Code.DataFeature.Domain;
 using _Root.Code.Shared.BuildingPorts;
@@ -35,6 +36,12 @@ namespace _Root.Code.DataFeature.Infrastructure
             }
 
             return _data;
+        }
+
+        public void RemoveBuilding(IPlacedBuildingPort placedBuildingPort)
+        {
+            var building = _saveWorldState.Buildings.First(b => b.GridPos.Equals(placedBuildingPort.GridPos));
+            _saveWorldState.Buildings.Remove(building);
         }
 
         public void AddBuilding(string buildingType, IPlacedBuildingPort building)

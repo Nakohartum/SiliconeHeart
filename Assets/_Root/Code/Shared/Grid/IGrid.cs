@@ -9,8 +9,6 @@ namespace _Root.Code.Shared.GridPos
         bool CanBePlaced(IGhostBuildingPort buildingPort);
         void Place(IPlacedBuildingPort buildingPort);
         void Remove(GridPos pos, Size size);
-        void ShowGrid();
-        void HideGrid();
         List<GridPos> GetOccupiedCells();
     }
 }

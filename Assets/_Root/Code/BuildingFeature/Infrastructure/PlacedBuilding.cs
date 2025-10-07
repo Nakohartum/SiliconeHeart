@@ -1,6 +1,7 @@
 ﻿using _Root.Code.BuildingFeature.Application;
 using _Root.Code.Shared.BuildingPorts;
 using _Root.Code.Shared.Common;
+using _Root.Code.Shared.DataPorts;
 using _Root.Code.Shared.GridPos;
 using UnityEngine;
 using Zenject;
@@ -13,6 +14,7 @@ namespace _Root.Code.BuildingFeature.Infrastructure
         [SerializeField] private BoxCollider2D _collider;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         private DeleteBuildingUseCase _deleteBuildingUseCase;
+        private IDataRepository _dataRepository;
         public GridPos GridPos => new GridPos(transform.position.x, transform.position.y);
 
         public Size Size => new Size
@@ -22,13 +24,15 @@ namespace _Root.Code.BuildingFeature.Infrastructure
         };
 
         [Inject]
-        private void Construct(DeleteBuildingUseCase deleteBuildingUseCase)
+        private void Construct(DeleteBuildingUseCase deleteBuildingUseCase, IDataRepository dataRepository)
         {
             _deleteBuildingUseCase = deleteBuildingUseCase;
+            _dataRepository = dataRepository;
         }
         public void Delete()
         {
             _deleteBuildingUseCase.Delete(GridPos, Size);
+            _dataRepository.RemoveBuilding(this);
             Destroy(gameObject);
         }
 

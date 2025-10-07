@@ -84,24 +84,6 @@ namespace _Root.Code.GridFeature.Infrastructure
             _deleteBuildingUseCase.DeleteBuilding(pos, size);
         }
 
-        [ContextMenu("ShowGrid")]
-        public void ShowGrid()
-        {
-            foreach (var line in _lines)
-            {
-                line.SetActive(true);
-            }
-        }
-
-        [ContextMenu("HideGrid")]
-        public void HideGrid()
-        {
-            foreach (var line in _lines)
-            {
-                line.SetActive(false);
-            }
-        }
-
         public List<GridPos> GetOccupiedCells()
         {
             return _grid.OccupiedGridPositions;
